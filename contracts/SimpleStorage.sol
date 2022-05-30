@@ -23,7 +23,8 @@ contract SimpleStorage {
     People[] public people;
 
     // Spends gas because we write to the blockchain (orange)
-    function store(uint256 _favoriteNumber) public {
+    // 'virtual' so we can override it with inheritence
+    function store(uint256 _favoriteNumber) public virtual {
         favoriteNumber = _favoriteNumber;
     }
 
